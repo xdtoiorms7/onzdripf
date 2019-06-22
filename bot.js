@@ -50,12 +50,16 @@ const client48 = new Discord.Client();
 const client49 = new Discord.Client();
 const client50 = new Discord.Client();
 
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
 client.on('message', msg => {
-  if (msg.content === '#dean') {
-    msg.channel.send('Test Successful');
-    msg.channel.sendFile('https://media.giphy.com/media/8GY3UiUjwKwhO/giphy.gif')
+  if (msg.content === '-#1929يثشهحخ') {
+    msg.reply('Pong!');
   }
 });
+
 
 
 client.login(process.env.BOT_TOKEN);
